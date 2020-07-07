@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.58",
+    "@docusaurus/plugin-ideal-image": "^2.0.0-alpha.39",
     "@docusaurus/preset-classic": "^2.0.0-alpha.58",
+    "@docusaurus/theme-live-codeblock": "^2.0.0-alpha.39",
     "clsx": "^1.1.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
@@ -26,5 +28,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5"
   }
 }

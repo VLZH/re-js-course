@@ -1,15 +1,15 @@
 .mdx_link_wrapper {
-  color: var(--ifm-heading-color);
-  margin-bottom: var(--ifm-leading);
+    color: var(--ifm-heading-color);
+    margin-bottom: var(--ifm-leading);
 }
 
 .mdx_link_wrapper .mdx_link {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: row-reverse;
-  text-decoration: none;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 3px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    text-decoration: none;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 3px;
 }
 
 .mdx_link_wrapper .mdx_link .mdx_link_left {
@@ -19,43 +19,43 @@
 }
 
 .mdx_link_wrapper .mdx_link .mdx_link_right {
-  width: 35%;
-  margin-right: 15px;
+    width: 35%;
+    margin-right: 15px;
 }
 
 .mdx_link_wrapper .mdx_link .mdx_link_title {
-  display: block;
-  color: var(--ifm-heading-color);
-  font-size: 1.3em;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+    display: block;
+    color: var(--ifm-heading-color);
+    font-size: 1.3em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .mdx_link_wrapper .mdx_link:hover .mdx_link_title {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .mdx_link_wrapper .mdx_link .mdx_link_subtitle {
-  display: block;
-  color: var(--ifm-blockquote-color);
+    display: block;
+    color: var(--ifm-blockquote-color);
 }
 
 .mdx_link_wrapper .mdx_link .mdx_link_href {
-  display: block;
-  font-size: 0.8em;
-  color: var(--ifm-blockquote-color);
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+    display: block;
+    font-size: 0.8em;
+    color: var(--ifm-blockquote-color);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .mdx_link_wrapper .mdx_link_cation {
-  display: block;
-  color: var(--ifm-blockquote-color);
-  font-size: 0.9em;
-  font-style: italic;
-  padding: 0 5px;
+    display: block;
+    color: var(--ifm-blockquote-color);
+    font-size: 0.9em;
+    font-style: italic;
+    padding: 0 5px;
 }
 
 .mdx_link_wrapper .mdx_link .mdx_link_right .mdx_link_image {
