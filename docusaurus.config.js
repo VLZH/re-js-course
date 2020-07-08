@@ -25,7 +25,7 @@ module.exports = {
                     position: "left",
                 },
                 {
-                    href: "https://github.com/VLZH/js-course",
+                    href: "https://github.com/VLZH/itr-js-course/",
                     label: "GitHub",
                     position: "right",
                 },
@@ -35,6 +35,12 @@ module.exports = {
             style: "dark",
             links: [],
             copyright: `Copyright © ${new Date().getFullYear()} https://github/VLZH. Built with Docusaurus🦖.`,
+        },
+        algolia: {
+            apiKey: "09b09ff88c1bdeb54ba45a0f76db60b0",
+            indexName: "javascript-courser",
+            appId: "LLSC0F76HG", // Optional, if you run the DocSearch crawler on your own
+            algoliaOptions: {}, // Optional, if provided by Algolia
         },
     },
     presets: [
@@ -46,7 +52,7 @@ module.exports = {
                     homePageId: "main",
                     sidebarPath: require.resolve("./sidebars.js"),
                     // Please change this to your repo.
-                    editUrl: "https://github.com/vlzh/js-course/",
+                    editUrl: "https://github.com/vlzh/itr-js-course/",
                 },
                 theme: {
                     customCss: require.resolve("./src/css/custom.css"),
