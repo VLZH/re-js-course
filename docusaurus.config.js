@@ -9,7 +9,7 @@ module.exports = {
     themeConfig: {
         prism: {
             theme: require("prism-react-renderer/themes/github"),
-            darkTheme: require("prism-react-renderer/themes/dracula"),
+            // darkTheme: require("prism-react-renderer/themes/dracula"),
         },
         navbar: {
             title: "You dont know JS",
@@ -62,4 +62,7 @@ module.exports = {
     ],
     themes: ["@docusaurus/theme-live-codeblock"],
     plugins: ["@docusaurus/plugin-ideal-image"],
+    stylesheets: [
+        "antd/es/timeline/css/index.css"
+    ]
 };

@@ -4,7 +4,7 @@ import "./Link.css";
 export const Link = ({ href, title, subtitle, caption, image }) => {
     return (
         <div className="mdx_link_wrapper">
-            <a href={href} className="mdx_link">
+            <a target="_blank" href={href} className="mdx_link">
                 <div className="mdx_link_left">
                     <span className="mdx_link_title">{title}</span>
                     {subtitle ? (

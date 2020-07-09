@@ -1,6 +1,6 @@
 module.exports = {
     main_sidebar: {
-        Основное: ["main"],
+        Основное: ["main", "timeline"],
         Javascript: [
             "js/comments_statements_expressions",
             "js/basic_statements",
@@ -17,6 +17,7 @@ module.exports = {
             "js/variables",
             "js/data_types",
             "js/functions",
+            "js/fp",
         ],
     },
 };
