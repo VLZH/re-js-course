@@ -18,6 +18,13 @@ module.exports = {
             "js/data_types",
             "js/functions",
             "js/fp",
+            {
+                type: "category",
+                label: "Методы",
+                items: [
+                    "js/methods/string_methods",
+                ],
+            },
         ],
     },
 };
