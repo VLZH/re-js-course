@@ -15,16 +15,13 @@ module.exports = {
                 ],
             },
             "js/variables",
-            "js/data_types",
-            "js/functions",
-            "js/fp",
             {
                 type: "category",
-                label: "Методы",
-                items: [
-                    "js/methods/string_methods",
-                ],
+                label: "Типы данных",
+                items: ["js/data_types/data_types", "js/data_types/strings"],
             },
+            "js/functions",
+            "js/fp",
         ],
     },
 };
