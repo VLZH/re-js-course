@@ -18,7 +18,7 @@ module.exports = {
             {
                 type: "category",
                 label: "Типы данных",
-                items: ["js/data_types/data_types", "js/data_types/strings"],
+                items: ["js/data_types/data_types", "js/data_types/strings","js/data_types/arrays"],
             },
             "js/functions",
             "js/fp",
