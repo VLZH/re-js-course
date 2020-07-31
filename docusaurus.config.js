@@ -1,18 +1,18 @@
 module.exports = {
-    title: "Javascript",
+    title: "Re: Javascript-Course",
     tagline: "Javascript tutorial",
     url: "https://re-js-course.vercel.app/",
     baseUrl: "/",
     favicon: "/img/logo.svg",
     organizationName: "vlzh", // Usually your GitHub org/user name.
-    projectName: "Javascript", // Usually your repo name.
+    projectName: "Re: Javascript-Course", // Usually your repo name.
     themeConfig: {
         prism: {
             theme: require("prism-react-renderer/themes/github"),
             // darkTheme: require("prism-react-renderer/themes/dracula"),
         },
         navbar: {
-            title: "You dont know JS",
+            title: "Re: Javascript-Course",
             logo: {
                 alt: "",
                 src: "/img/logo.svg",
@@ -38,7 +38,7 @@ module.exports = {
         },
         algolia: {
             apiKey: "09b09ff88c1bdeb54ba45a0f76db60b0",
-            indexName: "javascript-courser",
+            indexName: "re-js-course",
             appId: "LLSC0F76HG", // Optional, if you run the DocSearch crawler on your own
             algoliaOptions: {}, // Optional, if provided by Algolia
         },
@@ -51,7 +51,6 @@ module.exports = {
                     routeBasePath: "/",
                     homePageId: "main",
                     sidebarPath: require.resolve("./sidebars.js"),
-                    // Please change this to your repo.
                     editUrl: "https://github.com/VLZH/re-js-course",
                 },
                 theme: {

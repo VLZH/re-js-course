@@ -1,5 +1,5 @@
 {
-    "index_name": "javascript-courser",
+    "index_name": "re-js-course",
     "start_urls": ["https://re-js-course.vercel.app/"],
     "stop_urls": [],
     "selectors": {
