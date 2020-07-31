@@ -1,0 +1,3 @@
+[submodule "notebooks"]
+	path = notebooks
+	url = git@github.com:bubble-bubble-gum/js-notebooks.git
