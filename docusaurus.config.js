@@ -4,12 +4,12 @@ module.exports = {
     url: "https://re-js-course.vercel.app/",
     baseUrl: "/",
     favicon: "/img/logo.svg",
-    organizationName: "vlzh", // Usually your GitHub org/user name.
-    projectName: "Re: Javascript-Course", // Usually your repo name.
+    organizationName: "vlzh",
+    projectName: "Re: Javascript-Course",
+    onBrokenLinks: "ignore",
     themeConfig: {
         prism: {
             theme: require("prism-react-renderer/themes/github"),
-            // darkTheme: require("prism-react-renderer/themes/dracula"),
         },
         navbar: {
             title: "Re: Javascript-Course",
@@ -39,8 +39,8 @@ module.exports = {
         algolia: {
             apiKey: "09b09ff88c1bdeb54ba45a0f76db60b0",
             indexName: "re-js-course",
-            appId: "LLSC0F76HG", // Optional, if you run the DocSearch crawler on your own
-            algoliaOptions: {}, // Optional, if provided by Algolia
+            appId: "LLSC0F76HG",
+            algoliaOptions: {},
         },
     },
     presets: [
