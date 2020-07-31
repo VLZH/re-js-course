@@ -1,6 +1,6 @@
 {
     "index_name": "javascript-courser",
-    "start_urls": ["https://itr-js-course.now.sh/"],
+    "start_urls": ["https://re-js-course.vercel.app/"],
     "stop_urls": [],
     "selectors": {
         "lvl0": "h1",

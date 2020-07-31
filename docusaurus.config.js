@@ -1,11 +1,11 @@
 module.exports = {
-    title: "Javascript [ITR]",
-    tagline: "Javascript tutorial for ITR",
-    url: "https://your-docusaurus-test-site.com",
+    title: "Javascript",
+    tagline: "Javascript tutorial",
+    url: "https://re-js-course.vercel.app/",
     baseUrl: "/",
     favicon: "/img/logo.svg",
-    organizationName: "ITR", // Usually your GitHub org/user name.
-    projectName: "Javascript [ITR]", // Usually your repo name.
+    organizationName: "vlzh", // Usually your GitHub org/user name.
+    projectName: "Javascript", // Usually your repo name.
     themeConfig: {
         prism: {
             theme: require("prism-react-renderer/themes/github"),
@@ -14,7 +14,7 @@ module.exports = {
         navbar: {
             title: "You dont know JS",
             logo: {
-                alt: "Javascript [ITR]",
+                alt: "",
                 src: "/img/logo.svg",
             },
             links: [
@@ -25,7 +25,7 @@ module.exports = {
                     position: "left",
                 },
                 {
-                    href: "https://github.com/VLZH/itr-js-course/",
+                    href: "https://github.com/VLZH/re-js-course",
                     label: "GitHub",
                     position: "right",
                 },
@@ -52,7 +52,7 @@ module.exports = {
                     homePageId: "main",
                     sidebarPath: require.resolve("./sidebars.js"),
                     // Please change this to your repo.
-                    editUrl: "https://github.com/vlzh/itr-js-course/",
+                    editUrl: "https://github.com/VLZH/re-js-course",
                 },
                 theme: {
                     customCss: require.resolve("./src/css/custom.css"),
