@@ -14,10 +14,10 @@ module.exports = {
         navbar: {
             title: "Re: Javascript-Course",
             logo: {
-                alt: "",
+                alt: "Re: Javascript-Course",
                 src: "/img/logo.svg",
             },
-            links: [
+            items: [
                 {
                     to: "docs/",
                     activeBasePath: "docs",

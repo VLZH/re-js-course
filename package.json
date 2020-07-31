@@ -9,11 +9,10 @@
     "deploy": "docusaurus deploy"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.58",
-    "@docusaurus/plugin-ideal-image": "^2.0.0-alpha.39",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.58",
-    "@docusaurus/theme-live-codeblock": "^2.0.0-alpha.39",
-    "antd": "^4.4.1",
+    "@docusaurus/core": "^2.0.0-alpha.60",
+    "@docusaurus/plugin-ideal-image": "^2.0.0-alpha.60",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.60",
+    "@docusaurus/theme-live-codeblock": "^2.0.0-alpha.60",
     "clsx": "^1.1.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
