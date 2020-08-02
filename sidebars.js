@@ -18,10 +18,19 @@ module.exports = {
             {
                 type: "category",
                 label: "Типы данных",
-                items: ["js/data_types/data_types", "js/data_types/strings","js/data_types/arrays"],
+                items: [
+                    "js/data_types/data_types",
+                    "js/data_types/strings",
+                    "js/data_types/arrays",
+                ],
             },
             "js/functions",
             "js/fp",
+            {
+                type: "category",
+                label: "Дополнительные темы",
+                items: ["js/generators_iterators_iterables"],
+            },
         ],
     },
 };

@@ -25,6 +25,11 @@ module.exports = {
                     position: "left",
                 },
                 {
+                    to: "https://github.com/bubble-bubble-gum/js-notebooks",
+                    label: "Notebooks",
+                    position: "left",
+                },
+                {
                     href: "https://github.com/VLZH/re-js-course",
                     label: "GitHub",
                     position: "right",
@@ -51,7 +56,7 @@ module.exports = {
                     routeBasePath: "/",
                     homePageId: "main",
                     sidebarPath: require.resolve("./sidebars.js"),
-                    editUrl: "https://github.com/VLZH/re-js-course",
+                    editUrl: "https://github.com/VLZH/re-js-course/tree/master/",
                 },
                 theme: {
                     customCss: require.resolve("./src/css/custom.css"),
@@ -60,8 +65,36 @@ module.exports = {
         ],
     ],
     themes: ["@docusaurus/theme-live-codeblock"],
-    plugins: ["@docusaurus/plugin-ideal-image"],
-    stylesheets: [
-        "antd/es/timeline/css/index.css"
-    ]
+    plugins: [
+        [
+            "@docusaurus/plugin-pwa",
+            {
+                debug: true,
+                offlineModeActivationStrategies: [
+                    "appInstalled",
+                    "queryString",
+                    "always",
+                ],
+                pwaHead: [
+                    {
+                        tagName: "link",
+                        rel: "icon",
+                        href: "/img/logo.svg",
+                    },
+                    {
+                        tagName: "link",
+                        rel: "manifest",
+                        href: "/manifest.json",
+                    },
+                    {
+                        tagName: "meta",
+                        name: "theme-color",
+                        content: "rgb(37, 194, 160)",
+                    },
+                ],
+            },
+        ],
+        "@docusaurus/plugin-ideal-image",
+    ],
+    stylesheets: ["antd/es/timeline/css/index.css"],
 };
