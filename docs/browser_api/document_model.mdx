@@ -1,0 +1,227 @@
+---
+title: Работа с DOM
+id: document_model
+---
+
+import IdealImage from "@theme/IdealImage";
+
+## DOM
+
+**Document Object Model(DOM)** – объектная модель документа, которая представляет все содержимое страницы в виде объектов, которые можно менять.
+
+В действительности вы скорее всего будете слышать термин **DOM-дерево**, это говорит нам только о том, что документ представляет из себя какое-то дерево.
+
+<IdealImage img={require("./document_model/tree.jpg")} />
+
+## Узлы дерева
+
+<IdealImage img={require("./document_model/hierarchy.png")} />
+
+Первым делом напомню, что у нас имеются узлы в **DOM-дереве**, некоторые из которых могут являться **элементами**(_запоминаем это как теги_)
+
+Слева представлена иерархия классов узлов в **DOM**
+
+[Свойства узлов: тип, тег и содержимое](https://learn.javascript.ru/basic-dom-node-properties#klassy-ierarhiya-dom)
+
+### nodeType
+
+<IdealImage img={require("./document_model/node_types.png")} />
+
+Тип узла содержится в его свойстве `nodeType`.
+
+Как правило, мы работаем всего с двумя типами узлов:
+
+-   Элемент.
+-   Текстовый узел.
+
+[Node.nodeType](https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType)
+
+### nodeName и tagName
+
+Существует целых два свойства: `nodeName` и `tagName`, которые содержат название(тег) элемента узла.
+
+_Название HTML-тега всегда находится в верхнем регистре._
+
+-   Свойство `tagName` есть только у элементов `Element` (в IE8- также у комментариев, но это ошибка в браузере).
+-   Свойство `nodeName` определено для любых узлов `Node`, для элементов оно равно `tagName`, а для не-элементов обычно содержит строку с типом узла.
+
+_Таким образом, при помощи `tagName` мы можем работать только с элементами, а `nodeName` может что-то сказать и о других типах узлов._
+
+```html
+<html>
+    <head>
+        <!-- ......... -->
+    </head>
+    <body>
+        <h1 id="header">Hello World!</h1>
+        <div id="div">Some content</div>
+    </body>
+    <script>
+        var div = document.getElementById("div");
+        var header = document.getElementById("header");
+        console.log(div.tagName); // "DIV"
+        console.log(div.tagName); // "H1"
+    </script>
+</html>
+```
+
+### innerHTML
+
+Свойство `innerHTML` описано в спецификации HTML 5.
+
+Оно позволяет получить HTML-содержимое элемента в виде строки. В `innerHTML` можно и читать и писать.
+
+```html
+<body>
+    <h1>Hello World!</h1>
+    <div id="div">
+        Some content
+    </div>
+</body>
+```
+
+```jsx
+console.log(document.body.innerHTML);
+var div = document.getElementById("div");
+div.innerHTML = "Another content";
+```
+
+[](https://learn.javascript.ru/basic-dom-node-properties#tonkosti-innerhtml)
+
+Тонкости innerHTML
+
+### outerHTML
+
+Свойство `outerHTML` содержит **HTML** элемента целиком.
+
+_Изменить outerHTML элемента невозможно._
+
+### nodeValue/data
+
+Для доступа к содержимому узлов, которые не являются элементами имеется этих два свойства.
+
+_Свойство `data` **может отсутствовать**, в тот момент, когда `nodeValue` – свойство обязательное и если в узле нет текста, в этом поле будет просто `null`_
+
+```jsx
+<body>
+    // My comment
+    <script>
+        console.log(document.body.childNodes[0].data) // "// My comment"
+    </script>
+</body>
+```
+
+### textContent
+
+Свойство `textContent` содержит только текст внутри элемента, за вычетом всех **<тегов>**.
+
+Иными словами, `elem.textContent` возвращает конкатенацию всех текстовых узлов внутри `elem`.
+
+```html
+<body>
+    <div id="div">
+        <div>Some Text</div>
+        <p>Lorem ipsum dolor sit amet</p>
+    </div>
+</body>
+```
+
+```jsx
+var div = document.getElementById("div");
+console.log(div.textContent);
+// Выведет в консоль:
+/*
+    Some Text
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, impedit?
+*/
+```
+
+### hidden
+
+Как правило, видим или невидим узел, определяется через CSS, свойствами `display` или `visibility`.
+
+В стандарте HTML5 предусмотрен специальн
+
+### childNodes
+
+:::note
+Это метод класса `Node`
+:::
+
+Через этот аттрибут вы можете получить массив дочерних узлов.
+
+### fistChild
+
+Доступ к первому дочернему узлу.
+
+### lastChild
+
+Доступ к последнему дочернему узлу.
+
+### children
+
+Доступ ко всем дочерним элементам.
+
+:::tip Обратите внимание
+Обратите внимание на то, что аттрибут `childNodes` предоставляет доступ ко всем дочерним узлам(_всех типом, даже комментариям_), тогда как аттрибут `children` предоставит доступ только к дочерним элементам.
+:::
+
+## Доступ к элементами
+
+Мы посмотрели на то как можно с помощью рекурсивного алгоритма обойти все узлы в DOM-дереве, также мы могли бы находить ноды с помощью рекурсивной функции.
+
+:::tip
+Попробуйте реализовать функцию для поиска ноды по ее типу.. например.
+:::
+
+Я думаю, что искать узлы через рекурсивную функцию вы бы не хотели - поэтому браузер предоставляет нам ряд методов именно для этого.
+
+### Поиск элементов по классу `getElementsByClassName`
+
+:::note
+Это метод класса `Element`.
+:::
+
+Данный метод позволяет обратиться к элементу через его класс, в данном случае маркированный список UL имеет класс nav. После того как мы обратились к документу через точку пишем метод getElementsByClassName и в круглых скобках указываем класс элемента к которому обращаемся, в моем случае это класс nav. И так же выводим все в консоль.
+
+```js
+var el = document.getElementsByClassName("nav");
+console.log(el);
+```
+
+Как итог в консоли мы видим объект, который содержит в себе всю информацию о данном элементе с классом nav. Поехали к следующему методу.
+
+### Поиск элемента по его id `getElementById`
+
+Метод `getElementById` позволяет обратиться к элементу через его идентификатор, который естественно должен быть уникален.
+
+```js
+var el = document.getElementById("nw");
+console.log(el);
+```
+
+### Поиск элементов по названию тега `getElementsByTagName`
+
+С помощью данного метода мы можем обратиться к элементам через наименование тега. Для примера обратимся к тегу `<body>`.
+
+```js
+var el = document.getElementsByTagName("body");
+console.log(el);
+```
+
+### Поиск элемента по его имени `getElementsByName`
+
+Метод `getElementsByName` позволяет обратится к элементу через его атрибут `name`, удобно использовать например при работе с формами. Обратимся к тегу `div` с атрибутом `name`, который равен значению `'block'`.
+
+```js
+var el = document.getElementsByName("block");
+console.log(el);
+```
+
+### `querySelectorAll`/`querySelector`
+
+Этих два метода позволяют находить элементы на странице через строку-селектор.
+
+:::note
+**Строка-селектора**
+:::

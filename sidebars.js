@@ -26,11 +26,13 @@ module.exports = {
             },
             "js/functions",
             "js/fp",
+            "js/prototype_inheritance",
             {
                 type: "category",
                 label: "Дополнительные темы",
                 items: ["js/generators_iterators_iterables"],
             },
         ],
+        "Browser API": ["browser_api/document_model"],
     },
 };
